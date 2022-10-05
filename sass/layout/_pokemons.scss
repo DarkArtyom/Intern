@@ -1,8 +1,17 @@
 .pokemons-list {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
 }
 
+.pokemon.item {
+  flex-basis: calc((100% - 3 * 30px) / 3);
+  &:not(:last-child) {
+    margin-bottom: 30px;
+    margin-left: 30px;
+  }
+}
 .pokemon-img {
   width: 250px;
   height: 250px;
@@ -10,4 +19,6 @@
 
 .pokemon-name {
   display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }

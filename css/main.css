@@ -18,6 +18,10 @@ p {
   margin: 0;
 }
 
+body {
+  margin: 0 auto;
+}
+
 img {
   margin: 0;
   display: block;
@@ -41,6 +45,7 @@ ol {
 }
 
 .pokemons-box {
+  margin: 0 auto;
   width: 1200px;
   padding: 20px;
 }
@@ -54,11 +59,27 @@ ol {
 .pokemons-list {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+
+.pokemon.item {
+  flex-basis: calc((100% - 90px) / 3);
+}
+.pokemon.item:not(:last-child) {
+  margin-bottom: 30px;
+  margin-left: 30px;
 }
 
 .pokemon-img {
   width: 250px;
   height: 250px;
+}
+
+.pokemon-name {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .backdrop {
@@ -68,6 +89,11 @@ ol {
   left: 0;
   position: fixed;
   background: rgba(48, 48, 48, 0.499);
+  transition: opacity 300ms, visibility 300ms;
+}
+
+.backdrop.is-hidden .modal {
+  transform: rotate(-290deg);
 }
 
 .modal {
@@ -77,11 +103,15 @@ ol {
   width: 550px;
   height: 550px;
   background-color: #fff;
-  transform: translate(-50%, -50%);
+  transition: transform 250ms;
+  transform: translate(-50%, -50%) rotate(0);
 }
 
 .modal-render-box {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   top: 50%;
   left: 50%;
   width: 550px;
@@ -133,6 +163,7 @@ ol {
 
 .modal-general {
   display: flex;
+  padding: 10px;
   border: 1px solid black;
 }
 
@@ -145,6 +176,7 @@ ol {
   display: flex;
   justify-content: space-around;
   margin-top: 10px;
+  padding: 10px;
   border: 1px solid black;
 }
 
@@ -156,4 +188,35 @@ ol {
 
 .modal_stats-item {
   display: flex;
+}
+
+.modal_moves-box {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid black;
+}
+
+.modal_moves-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal_damage-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  align-items: space-around;
+}
+
+.modal_damage-wrap > p {
+  background-color: yellow;
+  margin-right: 10px;
+}
+
+.modal_damage-wrap > p:last-child {
+  margin-right: 0;
+  background-color: green;
 }/*# sourceMappingURL=main.css.map */
