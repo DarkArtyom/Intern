@@ -41,7 +41,7 @@ ol {
 }
 
 .pokemons-box {
-  width: 800px;
+  width: 1200px;
   padding: 20px;
 }
 
@@ -57,8 +57,8 @@ ol {
 }
 
 .pokemon-img {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
 }
 
 .backdrop {
@@ -74,8 +74,8 @@ ol {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 450px;
-  height: 450px;
+  width: 550px;
+  height: 550px;
   background-color: #fff;
   transform: translate(-50%, -50%);
 }
@@ -84,8 +84,8 @@ ol {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 450px;
-  height: 450px;
+  width: 550px;
+  height: 550px;
   padding: 40px 20px 30px 20px;
   background-color: #fff;
   transform: translate(-50%, -50%);
